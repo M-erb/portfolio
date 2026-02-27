@@ -46,10 +46,12 @@ export interface simplePost {
 }
 
 const posts: Array<simplePost> = []
+
 for (const post of blogPosts) {
 	const { slug, data } = post
 	const date = new Date(data.date)
 	const optimizedPostImg = await getImage({ src: data.img.src as ImageMetadata, width: data.img.src.width, height: data.img.src.height })
+
 	posts.push({
 		title: data.title,
 		url: `/blog/${slug}`,

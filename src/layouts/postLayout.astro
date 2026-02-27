@@ -19,11 +19,11 @@ import markdownit from 'markdown-it'
 import { convert } from 'html-to-text'
 
 export interface Props {
-	frontmatter: { title, author, date, description, img, body, tags, category }
+	frontmatter: { title, author, date, description, img, body, tags, category, loadCodePenJs }
 }
 
 const md = markdownit()
-const { title, author, date, description, img, body, tags } = Astro.props.frontmatter
+const { title, author, date, description, img, body, tags, loadCodePenJs } = Astro.props.frontmatter
 const publishDate = new Date(date)
 const displayDate = formatDate(publishDate, 'MMM dd, yyyy')
 const optimizedPostImg = await getImage({ src: img.src, width: img.src.width, height: img.src.height })
@@ -110,14 +110,22 @@ const postMeta = {
 								}
 							</div>
 						</div>
+
+						{Astro.props.frontmatter.author}
+						{Astro.props.frontmatter.loadCodePenJs}
+						{loadCodePenJs ? <script is:inline async src="https://public.codepenassets.com/embed/index.js"></script> : ''}
+
+						<!-- <script async src="https://public.codepenassets.com/embed/index.js"></script> -->
 					</main>
 				</div>
 			</div>
+
 
 			<ContactSec />
 
 			<Footer menuList={menuList} menuList2={menuList2} socialList={socialList} />
 		</div>
+
 	</body>
 </html>
 
@@ -159,7 +167,7 @@ const postMeta = {
 		main {
 			flex: 0 0 auto;
 			width: 100%;
-			max-width: var(--width-lg);
+			max-width: 800px;
 			position: relative;
 			z-index: 1;
 	

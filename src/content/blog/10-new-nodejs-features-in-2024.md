@@ -1,7 +1,7 @@
 ---
 title: 10 New Nodejs features in 2024
 author: Michael Erb
-description: Using this as a baseline for future posts
+description: These 10 features, to me, represent that the node org and the javascript community as a whole is moving forward and maturing even more. Could not be happier.
 date: 10-12-2024
 draft: false
 img:
@@ -38,10 +38,10 @@ node --experimental-transform-types my-typescript-needing-transforms.ts
 
 Some of the features that require transformation are:
 
-* Enum
-* namespaces
-* legacy module
-* parameter properties
+- Enum
+- namespaces
+- legacy module
+- parameter properties
 
 ### Importing types
 
@@ -62,9 +62,11 @@ import { someFn } from '../utils.ts'
 ```
 
 ### My thoughts
+
 Really really cool. This is the best feature on this list, I believe, for the future of nodejs. Having some kind of easy type checking, in general will help the javascript community mature. Typescript has been dominating that landscape so it just makes sense to add at least a little support for it.
 
 ### Read more
+
 Can read more about this feature in the [node docs](https://nodejs.org/api/typescript.html).
 
 ## 2. SQLite `--experimental`
@@ -72,9 +74,9 @@ Can read more about this feature in the [node docs](https://nodejs.org/api/types
 Ever wanted a quick database for just trying out an idea? Well node.js has added the beloved SQLite under an experimental flag `--experimental-sqlite` to use out of the box. As of Node.js v22.9.0 this is still in active development and may change so I would not recommend anything other than hobby projects. Here are some examples taken from the nodejs docs for an in-memory DB:
 
 ```javascript
-'use strict';
-const { DatabaseSync } = require('node:sqlite');
-const database = new DatabaseSync(':memory:');
+'use strict'
+const { DatabaseSync } = require('node:sqlite')
+const database = new DatabaseSync(':memory:')
 
 // Execute SQL statements from strings.
 database.exec(`
@@ -82,16 +84,16 @@ database.exec(`
     key INTEGER PRIMARY KEY,
     value TEXT
   ) STRICT
-`);
+`)
 // Create a prepared statement to insert data into the database.
-const insert = database.prepare('INSERT INTO data (key, value) VALUES (?, ?)');
+const insert = database.prepare('INSERT INTO data (key, value) VALUES (?, ?)')
 // Execute the prepared statement with bound values.
-insert.run(1, 'hello');
-insert.run(2, 'world');
+insert.run(1, 'hello')
+insert.run(2, 'world')
 // Create a prepared statement to read data from the database.
-const query = database.prepare('SELECT * FROM data ORDER BY key');
+const query = database.prepare('SELECT * FROM data ORDER BY key')
 // Execute the prepared statement and log the result set.
-console.log(query.all());
+console.log(query.all())
 // Prints: [ { key: 1, value: 'hello' }, { key: 2, value: 'world' } ]
 ```
 
@@ -102,9 +104,11 @@ const sqlite = require('node:sqlite')
 ```
 
 ### My thoughts
+
 Having this built into nodejs will be amazing as SQLite is such as widely used database AND it is very flexible will make nodejs more versatile. Instead of having to rely on a 3rd party package that may lose support any day. A win, for sure, for nodejs.
 
 ### Read more
+
 https://nodejs.org/api/sqlite.html
 
 ## 3. `.env` support `--active-development`
@@ -124,9 +128,11 @@ node --env-file=.env --env-file=.development.env index.js
 ```
 
 ### My thoughts
+
 This is another little win for the nodejs community. One less packages to have to install when setting up a new project.
 
 ### Read more
+
 https://nodejs.org/dist/latest-v20.x/docs/api/cli.html#--env-fileconfig
 
 ## 4. Built in test runner `--stable`
@@ -208,9 +214,11 @@ test('skip() method with message', (t) => {
 ```
 
 ### My thoughts
+
 Unless there is a specific reason to use another, I would recommend at least checking this out as it has all the basics covered.
 
 ### Read more
+
 https://nodejs.org/api/test.html
 
 ## 5. Built in watch mode `--stable`
@@ -236,9 +244,11 @@ node --watch --watch-preserve-output test.js
 ```
 
 ### My thoughts
+
 This is one of those features that should have been added a long time ago. Very nice seeing it added now.
 
 ### Read more
+
 https://nodejs.org/api/cli.html#--watch
 
 ## 6. Glob support `--experimental`
@@ -250,17 +260,15 @@ Basically globs are patterns to select many different files using a 'wild card' 
 This support is being added to a few different nodejs file system APIs but below is one example. This will select all `js` files in all directories:
 
 ```javascript
-const { glob } = require('node:fs/promises')
-
-(async () => {
-  for await (const entry of glob('**/*.js'))
-    console.log(entry)
+const { glob } = require('node:fs/promises')(async () => {
+  for await (const entry of glob('**/*.js')) console.log(entry)
 })()
 ```
 
 To learn more about glob patterns check out this website: <a href="https://globster.xyz/" target="_blank">globster.xyz</a>
 
 ### Read more
+
 https://nodejs.org/docs/latest/api/fs.html#fspromisesglobpattern-options
 
 ## 7. Top level await
@@ -298,6 +306,7 @@ await myAsyncFunc() // yay!
 ```
 
 ### Read more
+
 https://nodejs.org/en/blog/release/v14.8.0/
 https://gist.github.com/Rich-Harris/0b6f317657f5167663b493c722647221
 
@@ -327,6 +336,7 @@ socket.addEventListener('message', (event) => {
 ```
 
 ### Read more
+
 https://nodejs.org/en/blog/announcements/v21-release-announce#built-in-websocket-client
 
 https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
@@ -349,16 +359,18 @@ function logWithId(msg) {
 }
 
 let idSeq = 0
-http.createServer((req, res) => {
-  asyncLocalStorage.run(idSeq++, () => {
-    logWithId('start')
-    // Imagine any chain of async operations here
-    setImmediate(() => {
-      logWithId('finish')
-      res.end()
+http
+  .createServer((req, res) => {
+    asyncLocalStorage.run(idSeq++, () => {
+      logWithId('start')
+      // Imagine any chain of async operations here
+      setImmediate(() => {
+        logWithId('finish')
+        res.end()
+      })
     })
   })
-}).listen(8080)
+  .listen(8080)
 
 http.get('http://localhost:8080')
 http.get('http://localhost:8080')
@@ -370,9 +382,11 @@ http.get('http://localhost:8080')
 ```
 
 ### My Thoughts
+
 I have not experimented with it yet but just awesome that this is one less package a dev needs to install to be more web compatible.
 
 ### Read more
+
 https://nodejs.org/api/async_context.html#class-asynclocalstorage
 
 ## 10. Single executable app `--active-development`
@@ -380,9 +394,11 @@ https://nodejs.org/api/async_context.html#class-asynclocalstorage
 First added to Node.js v18.16.0 and is still being worked on. This feature allow a node app to be combined into an executable file and distributed to other systems that do not have node installed and still be run. Your app would be built with everything it needs to run on a specific version of node on its own. This would allow sharing versions of your app to others that do not have node installed and still use the program.
 
 ### My thoughts
+
 I can't say I have experience using this feature but I am excited for it to get easier to use. It would be awesome if we could deploy to, potentially cheaper, hosting services your combined app and it would just run without laying ground work for node specifically.
 
 ### Read more
+
 https://nodejs.org/api/single-executable-applications.html#single-executable-applications
 
 ## Conclusion
