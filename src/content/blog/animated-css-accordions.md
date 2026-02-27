@@ -9,7 +9,7 @@ img:
   byName: River Fx
   byUrl: https://unsplash.com/@riverfx?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
   origSrc: https://unsplash.com/photos/man-playing-blue-accordion-during-daytime-IV4db_thdMA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-excerpt: excerpt
+excerpt: We have had to use either JavaScript to create accordions or CSS hacks for far too long. The JavaScript way just feels wrong in some cases. We need to add JS to an otherwise plain website just so we can open and close an element? Now there is a better way, with CSS!
 category: css
 tags: [css, html, details, summary, animation]
 loadCodePenJs: true
