@@ -1,7 +1,7 @@
 ---
 title: 10 New Nodejs features in 2024
 author: Michael Erb
-description: Using this as a baseline for future posts
+description: These 10 features, to me, represent that the node org and the javascript community as a whole is moving forward and maturing even more. Could not be happier.
 date: 10-12-2024
 draft: false
 img:
