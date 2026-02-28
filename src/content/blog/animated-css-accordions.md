@@ -45,7 +45,7 @@ Lets have a look at it.
 
 The details are not pretty though...
 
-<div style="margin-bottom: var(--size-6)">
+<div class="embed_code_block">
   <p class="codepen" data-height="300" data-pen-title="Basic Details Accordion" data-preview="true" data-slug-hash="PwGwdRR" data-editable="true" data-user="merb" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
     <span>See the Pen <a href="https://codepen.io/merb/pen/PwGwdRR">
     Basic Details Accordion</a> by Michael (<a href="https://codepen.io/merb">@merb</a>)
@@ -57,7 +57,7 @@ The default does not look the best but it works, let's see about styling them an
 
 Here is what we want to make. Just a simple slide down animation.
 
-<div style="margin-bottom: var(--size-6)">
+<div class="embed_code_block">
   <p class="codepen" data-height="300" data-pen-title="CSS animation Accordion with JS fallback" data-preview="true" data-slug-hash="xbEbmNR" data-editable="true" data-user="merb" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
     <span>See the Pen <a href="https://codepen.io/merb/pen/xbEbmNR">
     CSS animation Accordion with JS fallback</a> by Michael (<a href="https://codepen.io/merb">@merb</a>)
@@ -83,7 +83,7 @@ details {
 }
 ```
 
-<div style="margin-bottom: var(--size-6)">
+<div class="embed_code_block">
   <p class="codepen" data-height="300" data-pen-title="Details remove ugly arrow from details element" data-preview="true" data-slug-hash="YPGPRJX" data-editable="true" data-user="merb" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
     <span>See the Pen <a href="https://codepen.io/merb/pen/YPGPRJX">
     Details remove ugly arrow from details element</a> by Michael (<a href="https://codepen.io/merb">@merb</a>)
@@ -93,7 +93,7 @@ details {
 
 Just going to add a background color and an icon here to get the shape together. I have also put all of the content of the accordion into a `div` to make fallbacks easier. Notice that there is no animation yet, BUT they still function due to the `details` element being used!
 
-<div style="margin-bottom: var(--size-6)">
+<div class="embed_code_block">
   <p class="codepen" data-height="300" data-pen-title="Styling accordion using details+summary tags - no animation yet" data-preview="true" data-slug-hash="QwKbdyK" data-editable="true" data-user="merb" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
     <span>See the Pen <a href="https://codepen.io/merb/pen/QwKbdyK">
     Styling accordion using details+summary tags - no animation yet</a> by Michael (<a href="https://codepen.io/merb">@merb</a>)
@@ -131,7 +131,7 @@ It is recommended to apply the `interpolate-size: allow-keywords` at the root le
 }
 ```
 
-Then we can apply our transitions to the `::details-content` psudo-element.
+Then we can apply our transitions to the `::details-content` pseudo-element.
 
 ```css
 .accordion_item_details {
@@ -156,7 +156,7 @@ Then we can apply our transitions to the `::details-content` psudo-element.
 
 Here is the result! If you are in a browser that does not support `interpolate-size: allow-keywords` then you will not see an animation as there is not JS fallback in this example.
 
-<div style="margin-bottom: var(--size-6)">
+<div class="embed_code_block">
   <p class="codepen" data-height="300" data-pen-title="Accordion with details element and animation CSS only - no JS fallback" data-preview="true" data-slug-hash="yyaNgEp" data-editable="true" data-user="merb" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
     <span>See the Pen <a href="https://codepen.io/merb/pen/yyaNgEp">
     Accordion with details element and animation CSS only - no JS fallback</a> by Michael (<a href="https://codepen.io/merb">@merb</a>)
