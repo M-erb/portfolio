@@ -45,14 +45,14 @@ Due to it not being signed you may need to disable the quarantine after unziping
 sudo xattr -dr com.apple.quarantine 'WackaGodot.app'
 ```
 
-**Download:** <a href="https://assets.merb.dev/wackagodot/mac/WackaGodot.app.zip" download>WackaGodot.app</a>
+**Download:** <a href="https://assets.merb.dev/wackagodot/mac/WackaGodot.app.zip" class="btn __sm" download>WackaGodot.app</a>
 
 ### Linux
 
-**Download:** <a href="https://assets.merb.dev/wackagodot/linux/wackaGodot.x86_64.zip" download>wackaGodot.x86_64</a>
+**Download:** <a href="https://assets.merb.dev/wackagodot/linux/wackaGodot.x86_64.zip" class="btn __sm" download>wackaGodot.x86_64</a>
 
 ### Windows
 
 Again the app is not signed but I did not look up how to get around it on windows. I did test using `proton`, Steam's compatibility tech, on Linux and it worked great.
 
-**Download:** <a href="https://assets.merb.dev/wackagodot/windows/WackaGodot.exe.zip" download>WackaGodot.exe</a>
+**Download:** <a href="https://assets.merb.dev/wackagodot/windows/WackaGodot.exe.zip" class="btn __sm" download>WackaGodot.exe</a>
