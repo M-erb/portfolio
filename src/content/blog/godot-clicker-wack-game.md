@@ -33,7 +33,7 @@ This was so much fun to make! My family has been having a blast trying to beat e
 
 ## Release - Try it out
 
-Here is the relase files. I do not have a machine with windows so have only tested Mac and Linux.
+Here is the relase files. I do not have a machine with windows so have only tested Mac and Linux. Though I did test the `.exe` build using Steam's `proton` tech that is a compatibility layer to run windows software/games on Linux. It worked perfectly using that.
 
 github: <a href="https://github.com/M-erb/godot-clicker-game" target="_blank">github.com/M-erb/godot-clicker-game</a>
 
@@ -53,6 +53,6 @@ sudo xattr -dr com.apple.quarantine 'WackaGodot.app'
 
 ### Windows
 
-Again the app is not signed but I did not look up how to get around it on windows.
+Again the app is not signed but I did not look up how to get around it on windows. I did test using `proton`, Steam's compatibility tech, on Linux and it worked great.
 
 **Download:** <a href="https://assets.merb.dev/wackagodot/windows/WackaGodot.exe.zip" download>WackaGodot.exe</a>
