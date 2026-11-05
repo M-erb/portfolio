@@ -67,9 +67,11 @@ const postMeta = {
 		<div class="outer">
 			<Navigation menuList={menuList} socialList={socialList} />
 			<div class="post_bg" style={`background-image: url(${optimizedPostImg.src})`}>
-				<div class="post_bg_cite">
-					<span>Photo by <a href={img.byUrl} target="_blank">{img.byName}</a> on <a href={img.origSrc} target="_blank">Unsplash</a></span>
-				</div>
+				{img.byUrl && img.byName && img.origSrc ? 
+					<div class="post_bg_cite">
+						<span>Photo by <a href={img.byUrl} target="_blank">{img.byName}</a> on <a href={img.origSrc} target="_blank">Unsplash</a></span>
+					</div>
+				: ''}
 			</div>
 
 			<div class="middle_content">
