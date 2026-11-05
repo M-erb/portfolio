@@ -9,7 +9,7 @@ img:
   byName: ""
   byUrl: ""
   origSrc: ""
-excerpt: Diam nginx maecenas uUpellentesque diam volutpat commodo sed egestas. Nisi est sit amet facilisis magna etiam tempor orci. Habitant morbi tristique senectus et netus et. Sed augue lacus viverra vitae congue eu consequat ac. Egestas purus viverra accumsan in nisl. Risus pretium quam vulputate dignissim suspendisse in est ante. Turpis egestas pretium aenean pharetra magna ac.
+excerpt: This has been something I have wanted to do since I was young. Probably not something unquie to me, especially those that work in the information technology industry. None the less, I finally set aside some time to dive into it. Just like when I started learning programming and web development almost 10 years ago, I feel like a noob. Hosestly though, it has been a breath of fresh air dispite being overwhelmed with all of the new information.
 category: godot
 tags: [godot, game-dev, programming]
 ---
