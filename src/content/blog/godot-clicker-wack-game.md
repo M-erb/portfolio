@@ -39,18 +39,20 @@ github: <a href="https://github.com/M-erb/godot-clicker-game" target="_blank">gi
 
 ### MacOS
 
-Due to it not being signed you may need to disable the quarantine after unziping it in the same folder it is in.
+Due to it not being signed you may need to disable the quarantine after unziping it in the same folder it is in. Otherwise you may get a message like "app may be broken".
 
 ```bash
 sudo xattr -dr com.apple.quarantine 'WackaGodot.app'
 ```
 
-<a href="/assets/wackagodot/mac/WackaGodot.app.zip" download>WackaGodot.app</a>
+**Download:** <a href="https://assets.merb.dev/wackagodot/mac/WackaGodot.app.zip" download>WackaGodot.app</a>
 
 ### Linux
 
-<a href="/assets/wackagodot/linux/wackaGodot.x86_64.zip" download>wackaGodot.x86_64</a>
+**Download:** <a href="https://assets.merb.dev/wackagodot/linux/wackaGodot.x86_64.zip" download>wackaGodot.x86_64</a>
 
 ### Windows
 
-<a href="/assets/wackagodot/windows/WackaGodot.exe.zip" download>WackaGodot.exe</a>
+Again the app is not signed but I did not look up how to get around it on windows.
+
+**Download:** <a href="https://assets.merb.dev/wackagodot/windows/WackaGodot.exe.zip" download>WackaGodot.exe</a>
